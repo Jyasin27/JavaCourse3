@@ -5,6 +5,8 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.HomePage;
 
@@ -14,13 +16,15 @@ import java.util.List;
 public class BaseTest {
     private WebDriver driver;
     protected HomePage homePage;
-    @Test
+
+    @BeforeClass
     public void setUp()
     {
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/"); //launch browser
         homePage = new HomePage(driver);
+
        // driver.manage().window().setSize(new Dimension(352, 400));
 
 
@@ -37,13 +41,14 @@ public class BaseTest {
 
 
 
+
+    }
+    @AfterClass
+    public  void teardown()
+    {
         System.out.println(driver.getTitle());
         driver.quit();
     }
 
-    public static void main(String args[])
-    {
-        BaseTest test = new BaseTest();
-        test.setUp();
-    }
+
 }

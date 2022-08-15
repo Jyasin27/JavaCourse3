@@ -15,6 +15,6 @@ public class SecureAreaPage {
 
     public String getAlertText()
     {
-        return driver.findElement(statusAlert).getText();
+        return driver.findElement(statusAlert).getText(); //returns text
     }
 }
