@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4affb2b4-3013-406e-8337-d4051eadda29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/ContextMenuPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/WysiwygEditorPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/alerts/ContextMenuTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/frames/FrameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ContextMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ContextMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,21 +37,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TrainingProject2" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pages" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jihan\IdeaProjects\JavaCourse3.1\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FileUploadTests">
-    <configuration name="AlertTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3.1" />
+  <component name="RunManager" selected="TestNG.FrameTest.testWysiwyg">
+    <configuration name="ContextMenuTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="alerts.*" />
@@ -55,7 +60,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="alerts" />
-      <option name="MAIN_CLASS_NAME" value="alerts.AlertTest" />
+      <option name="MAIN_CLASS_NAME" value="alerts.ContextMenuTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -63,8 +68,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlertTest.testGetTextFromAlert" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3.1" />
+    <configuration name="ContextMenuTest.contextClickTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="alerts.*" />
@@ -72,8 +77,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="alerts" />
-      <option name="MAIN_CLASS_NAME" value="alerts.AlertTest" />
-      <option name="METHOD_NAME" value="testGetTextFromAlert" />
+      <option name="MAIN_CLASS_NAME" value="alerts.ContextMenuTest" />
+      <option name="METHOD_NAME" value="contextClickTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -81,35 +86,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlertTest.testSetInputInAlert" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3.1" />
+    <configuration name="FrameTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="alerts.*" />
+          <option name="PATTERN" value="frames.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="alerts" />
-      <option name="MAIN_CLASS_NAME" value="alerts.AlertTest" />
-      <option name="METHOD_NAME" value="testSetInputInAlert" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileUploadTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3.1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="alerts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="alerts" />
-      <option name="MAIN_CLASS_NAME" value="alerts.FileUploadTests" />
+      <option name="PACKAGE_NAME" value="frames" />
+      <option name="MAIN_CLASS_NAME" value="frames.FrameTest" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FrameTest.testWysiwyg" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="frames.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="frames" />
+      <option name="MAIN_CLASS_NAME" value="frames.FrameTest" />
+      <option name="METHOD_NAME" value="testWysiwyg" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -135,10 +140,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FileUploadTests" />
-        <item itemvalue="TestNG.AlertTest" />
-        <item itemvalue="TestNG.AlertTest.testSetInputInAlert" />
-        <item itemvalue="TestNG.AlertTest.testGetTextFromAlert" />
+        <item itemvalue="TestNG.FrameTest.testWysiwyg" />
+        <item itemvalue="TestNG.FrameTest" />
+        <item itemvalue="TestNG.ContextMenuTest" />
+        <item itemvalue="TestNG.ContextMenuTest.contextClickTest" />
         <item itemvalue="TestNG.SliderTest" />
       </list>
     </recent_temporary>
@@ -164,11 +169,15 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/keys/KeysTest.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/slider/SliderTest.java</url>
           <line>16</line>
