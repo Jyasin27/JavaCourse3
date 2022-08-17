@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 
@@ -22,26 +23,15 @@ public class BaseTest {
     {
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https://the-internet.herokuapp.com/"); //launch browser
+        goHome();
         homePage = new HomePage(driver);
 
-       // driver.manage().window().setSize(new Dimension(352, 400));
 
-
-//       //find all links on pg and count them
-//        List<WebElement> links = driver.findElements(By.tagName("a"));
-//        System.out.println(links.size());
-//
-//        WebElement inputsLink = driver.findElement(By.linkText("Shifting Content"));
-//        inputsLink.click();
-//        driver.findElement(By.linkText("Example 1: Menu Element")).click();
-//        List<WebElement> menu = driver.findElements(By.tagName("li"));
-//        System.out.println(menu.size());
-
-
-
-
-
+    }
+    @BeforeMethod
+    public void goHome()
+    {
+        driver.get("https://the-internet.herokuapp.com/"); //launch browser
     }
     @AfterClass
     public  void teardown()
