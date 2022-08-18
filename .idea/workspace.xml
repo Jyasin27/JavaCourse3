@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4affb2b4-3013-406e-8337-d4051eadda29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/WysiwygEditorPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/alerts/ContextMenuTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/frames/FrameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DynamicLoadingExample1Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DynamicLoadingExample2Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pages/DynamicLoadingPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/wait/WaitTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_08_17_14_46__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_08_17_14_46__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/ContextMenuPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ContextMenuPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/WysiwygEditorPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/WysiwygEditorPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/frames/FrameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/frames/FrameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,22 +41,21 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TrainingProject2" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jihan\IdeaProjects\JavaCourse3.1\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FrameTest.testWysiwyg">
-    <configuration name="ContextMenuTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
+  <component name="RunManager" selected="TestNG.WaitTests.testWaitUntilHidden2">
+    <configuration name="FileUploadTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="alerts.*" />
@@ -60,7 +63,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="alerts" />
-      <option name="MAIN_CLASS_NAME" value="alerts.ContextMenuTest" />
+      <option name="MAIN_CLASS_NAME" value="alerts.FileUploadTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -68,26 +71,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ContextMenuTest.contextClickTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="alerts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="alerts" />
-      <option name="MAIN_CLASS_NAME" value="alerts.ContextMenuTest" />
-      <option name="METHOD_NAME" value="contextClickTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FrameTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
+      <module name="JavaCourse3.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="frames.*" />
@@ -104,7 +89,7 @@
       </method>
     </configuration>
     <configuration name="FrameTest.testWysiwyg" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
+      <module name="JavaCourse3.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="frames.*" />
@@ -121,17 +106,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SliderTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
+    <configuration name="WaitTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="slider.*" />
+          <option name="PATTERN" value="wait.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="slider" />
-      <option name="MAIN_CLASS_NAME" value="slider.SliderTest" />
+      <option name="PACKAGE_NAME" value="wait" />
+      <option name="MAIN_CLASS_NAME" value="wait.WaitTests" />
       <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WaitTests.testWaitUntilHidden2" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="wait.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="wait" />
+      <option name="MAIN_CLASS_NAME" value="wait.WaitTests" />
+      <option name="METHOD_NAME" value="testWaitUntilHidden2" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -140,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WaitTests.testWaitUntilHidden2" />
+        <item itemvalue="TestNG.WaitTests" />
         <item itemvalue="TestNG.FrameTest.testWysiwyg" />
         <item itemvalue="TestNG.FrameTest" />
-        <item itemvalue="TestNG.ContextMenuTest" />
-        <item itemvalue="TestNG.ContextMenuTest.contextClickTest" />
-        <item itemvalue="TestNG.SliderTest" />
+        <item itemvalue="TestNG.FileUploadTests" />
       </list>
     </recent_temporary>
   </component>
@@ -169,15 +172,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/keys/KeysTest.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/slider/SliderTest.java</url>
           <line>16</line>

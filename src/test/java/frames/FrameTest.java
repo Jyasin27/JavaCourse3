@@ -17,7 +17,7 @@ public class FrameTest extends BaseTest {
         String text2 = "World";
 
         editorPage.setTextArea(text1);
-        editorPage.decreaseIndent();
+        editorPage.increaseIndentBtn();
         editorPage.setTextArea(text2);
 
         assertEquals(editorPage.getTextFromEditor(), text1 +text2,

@@ -2,14 +2,13 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class WysiwygEditorPage {
 
     private WebDriver driver;
     private String editorIframeId = "mce_0_ifr";
     private By textArea = By.id("tinymce");
-    private By decreaseIndentBtn = By.cssSelector("//button[@aria-label='Increase indent']");
+    private By increaseIndentBtn = By.xpath("//div[@role='group']//button[@title='Increase indent']");
 
 
     public WysiwygEditorPage(WebDriver driver)
@@ -35,9 +34,9 @@ public class WysiwygEditorPage {
       switchToMainArea();
       return text;
     }
-    public void decreaseIndent ()
+    public void increaseIndentBtn ()
     {
-        driver.findElement(decreaseIndentBtn).click();
+        driver.findElement(increaseIndentBtn).click();
     }
     private void switchToEditArea()
     {

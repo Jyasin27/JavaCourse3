@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import javax.management.DynamicMBean;
+
 public class HomePage {
 
 
@@ -63,6 +65,11 @@ public class HomePage {
     {
         clickLink("WYSIWYG Editor");
         return new WysiwygEditorPage(driver);
+    }
+    public DynamicLoadingPage clickDynamicLoading()
+    {
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
     }
 
     public void clickLink(String linkText)

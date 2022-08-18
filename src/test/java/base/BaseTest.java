@@ -12,7 +12,9 @@ import org.testng.annotations.Test;
 import pages.HomePage;
 
 import javax.print.DocFlavor;
+import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     private WebDriver driver;
@@ -23,6 +25,8 @@ public class BaseTest {
     {
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
         driver = new ChromeDriver();
+        driver.manage().timeouts().setScriptTimeout(1, TimeUnit.SECONDS);
+       // driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         goHome();
         homePage = new HomePage(driver);
 
