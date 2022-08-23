@@ -24,4 +24,13 @@ public class FrameTest extends BaseTest {
                 "Text from editor is incorrect");
 
     }
+    @Test
+    public void testFrames()
+    {
+        var framesPage = homePage.clickFramesPage();
+        framesPage.selectLeftFrame();
+        framesPage.selectBottomFrame();
+
+       // assertEquals(framesPage.selectLeftFrame(););
+    }
 }

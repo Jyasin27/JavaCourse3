@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import javax.management.DynamicMBean;
+import java.nio.channels.MulticastChannel;
 
 public class HomePage {
 
@@ -82,6 +83,16 @@ public class HomePage {
         return new InfiniteScrollPage(driver);
     }
 
+    public FramesPage clickFramesPage()
+    {
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
+    public MultipleWindowsPage clickMultipleWindows()
+    {
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
     public void clickLink(String linkText)
     {
         driver.findElement(By.linkText(linkText)).click();

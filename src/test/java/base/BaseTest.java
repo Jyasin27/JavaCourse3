@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
+import utils.WindowManager;
 
 import javax.print.DocFlavor;
 import java.time.Duration;
@@ -42,6 +43,11 @@ public class BaseTest {
     {
         System.out.println(driver.getTitle());
         driver.quit();
+    }
+
+    public WindowManager getWindowManager()
+    {
+        return new WindowManager(driver);
     }
 
 
