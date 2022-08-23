@@ -1,18 +1,14 @@
 package base;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.HomePage;
 import utils.WindowManager;
 
 import javax.print.DocFlavor;
+import java.io.File;
+import java.nio.file.Files;
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -43,6 +39,14 @@ public class BaseTest {
     {
         System.out.println(driver.getTitle());
         driver.quit();
+    }
+    @AfterMethod
+    public void takesScreenshot()
+    {
+        var camera = (TakesScreenshot)driver; //cast
+        File screenshot = camera.getScreenshotAs(OutputType.FILE);
+        Files.move(Screenshot, new File("resources/screenshots/test.png"))
+        System.out.println("Screenshot taken: " + screenshot.getAbsolutePath());
     }
 
     public WindowManager getWindowManager()
