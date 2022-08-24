@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4affb2b4-3013-406e-8337-d4051eadda29" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/InfiniteScrollPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/LargeAndDeepDomPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/javascript/JavaScriptTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_08_18_07_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_08_18_07_59__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_08_18_14_45__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_08_18_14_45__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/DynamicLoadingExample2Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/DynamicLoadingExample2Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +34,39 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TrainingProject2" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jihan\IdeaProjects\JavaCourse3.1\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.JavaScriptTests.testScrollToFifthParagraph">
+  <component name="RunManager" selected="TestNG.KeysTest">
+    <configuration name="FrameTest.testWysiwyg" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3.1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="frames.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="frames" />
+      <option name="MAIN_CLASS_NAME" value="frames.FrameTest" />
+      <option name="METHOD_NAME" value="testWysiwyg" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavaScriptTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
+      <module name="JavaCourse3.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="javascript.*" />
@@ -69,44 +82,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaScriptTests.testScrollToFifthParagraph" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
+    <configuration name="KeysTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3.1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="javascript.*" />
+          <option name="PATTERN" value="keys.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="javascript" />
-      <option name="MAIN_CLASS_NAME" value="javascript.JavaScriptTests" />
-      <option name="METHOD_NAME" value="testScrollToFifthParagraph" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="keys" />
+      <option name="MAIN_CLASS_NAME" value="keys.KeysTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JavaScriptTests.testScrollToTable" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="javascript.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="javascript" />
-      <option name="MAIN_CLASS_NAME" value="javascript.JavaScriptTests" />
-      <option name="METHOD_NAME" value="testScrollToTable" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WaitTests.testWaitUntilHidden" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
+    <configuration name="WaitTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="JavaCourse3.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="wait.*" />
@@ -115,8 +109,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="wait" />
       <option name="MAIN_CLASS_NAME" value="wait.WaitTests" />
-      <option name="METHOD_NAME" value="testWaitUntilHidden" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -124,7 +117,7 @@
       </method>
     </configuration>
     <configuration name="WaitTests.testWaitUntilHidden2" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="JavaCourse3" />
+      <module name="JavaCourse3.1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="wait.*" />
@@ -143,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.JavaScriptTests.testScrollToFifthParagraph" />
+        <item itemvalue="TestNG.KeysTest" />
         <item itemvalue="TestNG.JavaScriptTests" />
-        <item itemvalue="TestNG.JavaScriptTests.testScrollToTable" />
         <item itemvalue="TestNG.WaitTests.testWaitUntilHidden2" />
-        <item itemvalue="TestNG.WaitTests.testWaitUntilHidden" />
+        <item itemvalue="TestNG.WaitTests" />
+        <item itemvalue="TestNG.FrameTest.testWysiwyg" />
       </list>
     </recent_temporary>
   </component>
@@ -172,15 +165,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/keys/KeysTest.java</url>
-          <line>22</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/slider/SliderTest.java</url>
           <line>16</line>
