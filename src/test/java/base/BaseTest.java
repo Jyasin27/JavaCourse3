@@ -2,9 +2,12 @@ package base;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
+import utils.EventReporter;
 import utils.WindowManager;
 
 import javax.print.DocFlavor;
@@ -16,18 +19,20 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
-    private WebDriver driver;
+    private EventFiringWebDriver driver;
     protected HomePage homePage;
 
     @BeforeClass
     public void setUp()
     {
         System.setProperty("webdriver.chrome.driver","resources/chromedriver.exe");
-        driver = new ChromeDriver();
+        homePage = new HomePage(driver);
+        driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions())); //listen for events
         driver.manage().timeouts().setScriptTimeout(1, TimeUnit.SECONDS);
        // driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        driver.register(new EventReporter());
         goHome();
-        homePage = new HomePage(driver);
+        setCookie();
 
 
     }
@@ -42,47 +47,40 @@ public class BaseTest {
         System.out.println(driver.getTitle());
         driver.quit();
     }
-    @AfterMethod
-    public void takesScreenshot()
-    {
-        var camera = (TakesScreenshot)driver; //cast
-        File screenshot = camera.getScreenshotAs(OutputType.FILE);
-        Files.move(Screenshot, new File("resources/screenshots/test.png"))
-        System.out.println("Screenshot taken: " + screenshot.getAbsolutePath());
-    }
 
+
+    @AfterMethod
+
+    public void recordFailure(ITestResult result) {
+        if (ITestResult.FAILURE == result.getStatus()) {
+            //cast driver to Take Screenshot class
+            var camera = (TakesScreenshot) driver;
+            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+            try {
+                com.google.common.io.Files.move(screenshot, new File("resources/screenshots/" + result.getName()));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     public WindowManager getWindowManager()
     {
         return new WindowManager(driver);
     }
-//    @AfterMethod
-//<<<<<<< HEAD
-//    public void recordFailure(ITestResult result)
-//    {
-//        if(ITestResult.FAILURE== result.getStatus()) {
-//            //cast driver to Take Screenshot class
-//            var camera = (TakesScreenshot) driver;
-//            File screenshot = camera.getScreenshotAs(OutputType.FILE);
-//            try {
-//                com.google.common.io.Files.move(screenshot, new File("resources/screenshots/"+ result.getName()));
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//
-//=======
-//        public void takesScreenshot()
-//        {
-//            var camera = (TakesScreenshot)driver; //cast
-//            File screenshot = camera.getScreenshotAs(OutputType.FILE);
-//            com.google.common.io.Files.move(Screenshot, new File("resources/screenshots/test.png"))
-//            System.out.println("Screenshot taken: " + screenshot.getAbsolutePath());
-//        }
-//
-//        public WindowManager getWindowManager()
-//        {
-//            return new WindowManager(driver);
-//>>>>>>> 55f0ae8b25499e5eb516acfdb83cfdd4ba1564fa
-//        }
+
+    private ChromeOptions getChromeOptions()
+    {
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+      //  options.setHeadless(true); //run without opening browser
+        return options;
+    }
+    private void setCookie() //creates cookie
+    {
+        Cookie cookie = new Cookie.Builder("tau", "123")
+                .domain("the-internet.herokuapp.com")
+                .build();
+        driver.manage().addCookie(cookie);
+    }
 
 }
