@@ -1,16 +1,14 @@
 package base;
 
-import com.google.common.io.Files;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.ITest;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
+import utils.WindowManager;
 
 import javax.print.DocFlavor;
 import java.io.File;
-import java.io.IOException;
+import java.nio.file.Files;
 import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -36,7 +34,6 @@ public class BaseTest {
     {
         driver.get("https://the-internet.herokuapp.com/"); //launch browser
     }
-
     @AfterClass
     public  void teardown()
     {
@@ -44,19 +41,17 @@ public class BaseTest {
         driver.quit();
     }
     @AfterMethod
-    public void recordFailure(ITestResult result)
+    public void takesScreenshot()
     {
-        if(ITestResult.FAILURE== result.getStatus()) {
-            //cast driver to Take Screenshot class
-            var camera = (TakesScreenshot) driver;
-            File screenshot = camera.getScreenshotAs(OutputType.FILE);
-            try {
-                Files.move(screenshot, new File("resources/screenshots/"+ result.getName()));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
+        var camera = (TakesScreenshot)driver; //cast
+        File screenshot = camera.getScreenshotAs(OutputType.FILE);
+        Files.move(Screenshot, new File("resources/screenshots/test.png"))
+        System.out.println("Screenshot taken: " + screenshot.getAbsolutePath());
+    }
 
+    public WindowManager getWindowManager()
+    {
+        return new WindowManager(driver);
     }
 
 
