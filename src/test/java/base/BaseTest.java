@@ -2,12 +2,14 @@ package base;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
 import pages.HomePage;
 import utils.WindowManager;
 
 import javax.print.DocFlavor;
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.time.Duration;
 import java.util.List;
@@ -53,6 +55,34 @@ public class BaseTest {
     {
         return new WindowManager(driver);
     }
-
+//    @AfterMethod
+//<<<<<<< HEAD
+//    public void recordFailure(ITestResult result)
+//    {
+//        if(ITestResult.FAILURE== result.getStatus()) {
+//            //cast driver to Take Screenshot class
+//            var camera = (TakesScreenshot) driver;
+//            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+//            try {
+//                com.google.common.io.Files.move(screenshot, new File("resources/screenshots/"+ result.getName()));
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//
+//=======
+//        public void takesScreenshot()
+//        {
+//            var camera = (TakesScreenshot)driver; //cast
+//            File screenshot = camera.getScreenshotAs(OutputType.FILE);
+//            com.google.common.io.Files.move(Screenshot, new File("resources/screenshots/test.png"))
+//            System.out.println("Screenshot taken: " + screenshot.getAbsolutePath());
+//        }
+//
+//        public WindowManager getWindowManager()
+//        {
+//            return new WindowManager(driver);
+//>>>>>>> 55f0ae8b25499e5eb516acfdb83cfdd4ba1564fa
+//        }
 
 }
